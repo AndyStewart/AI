@@ -1,0 +1,4 @@
+interface:
+  display_name: "Architecture Decision Records"
+  short_description: "Create and maintain ADRs in-repo"
+  default_prompt: "Use $adr to draft or update an Architecture Decision Record in this repository."

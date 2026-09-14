@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Design"
+  short_description: "Write contracts-first technical designs"
+  default_prompt: "Use $technical-design to write a contracts-first technical design for these approved requirements."
