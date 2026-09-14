@@ -1,6 +1,6 @@
 ---
 name: technical-design
-description: Write or revise contracts-first technical designs for approved requirements. Use for implementation proposals, not product discovery or ADR authoring.
+description: Write or revise contracts-first technical designs for approved requirements. Use for technical implementation proposals, not product discovery or ADR authoring.
 ---
 
 # Technical Design
@@ -34,3 +34,10 @@ important invariants, ownership, lifecycle, and concurrency rules explicit. Fini
 with the smallest useful delivery slices and evidence for the requirements and
 material risks. Do not publish the design or begin implementation without the
 user's authorization for that action.
+
+Use the `show-me` skill to explain the design's most important technical detail
+visually. Choose the smallest useful format: a call tree for runtime flow, a
+component or file tree for ownership and boundaries, pseudocode for logic, or
+Mermaid for interactions and data flow. Place the visual next to the concise
+prose it supports, and use a focused HTML artifact only when the topic cannot be
+made clear with a text-based visual.
