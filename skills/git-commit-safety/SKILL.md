@@ -14,6 +14,11 @@ Before committing:
 3. Reuse successful checks only when the relevant files and behavior are unchanged. Do not claim checks that did not run.
 4. If validation is missing or failing, explain the exact gap and do not commit or call the branch safe to push.
 
+Before pushing:
+- Do not push code changes until the repository's full test suite has passed in this session.
+- Focused or filtered test runs are not enough for pushing; use them for development feedback only.
+- If the full test suite fails or cannot be run, do not push. Report the failing command or blocker instead.
+
 Write the commit message from the actual diff:
 
 - Use imperative mood and a concise subject, normally under 72 characters.
