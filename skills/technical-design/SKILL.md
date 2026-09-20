@@ -12,7 +12,7 @@ Use the target repository's agent guidance to locate relevant design conventions
 architecture decisions, and product requirements. Follow its established template
 when one exists; read only material relevant to the proposed capability. If there
 is no convention, organize the design around boundaries, contracts, invariants,
-delivery slices, evidence, and unresolved decisions, omitting irrelevant sections.
+evidence, and unresolved decisions, omitting irrelevant sections.
 
 Before drafting, assess whether the proposal materially changes an architectural
 boundary, persistence strategy, durable public contract, or cross-cutting policy.
@@ -31,9 +31,8 @@ Keep these distinctions explicit, adapting them to the project's architecture:
 
 State each business outcome once and map it to consumer-visible behavior. Make
 important invariants, ownership, lifecycle, and concurrency rules explicit. Finish
-with the smallest useful delivery slices and evidence for the requirements and
-material risks. Do not publish the design or begin implementation without the
-user's authorization for that action.
+with evidence for the requirements and material risks. Do not publish the design
+or begin implementation without the user's authorization for that action.
 
 Use the `show-me` skill to explain the design's most important technical detail
 visually. Choose the smallest useful format: a call tree for runtime flow, a
