@@ -1,9 +1,13 @@
 ---
 name: implement-issue
-description: "Implement tracked issues or stories as small, end-to-end vertical slices, committing each validated slice."
+description: "Use when implementing a tracked issue or story as validated, end-to-end vertical slices."
 ---
 
 # Implement Issue
+
+## Required invocation
+
+Use this skill before beginning any implementation requested through a tracked issue or story, including requests phrased as "implement issue #…", "build this story", or a tracker link. Do not begin code changes until you have read the issue and established the first vertical slice below.
 
 Deliver the requested issue in independently useful, reviewable increments.
 
