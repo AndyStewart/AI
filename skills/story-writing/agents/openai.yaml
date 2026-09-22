@@ -1,4 +1,4 @@
 interface:
   display_name: "Story Writing"
   short_description: "Interview ideas into product-ready XP stories"
-  default_prompt: "Use $story-writing to interview me about a feature idea and turn it into small independent vertical stories with enough product detail to begin design or implementation without further product-requirements questions."
+  default_prompt: "Use $story-writing to interview me about a feature idea and turn it into a product-ready epic and small child stories with enough product detail to begin design or implementation."
