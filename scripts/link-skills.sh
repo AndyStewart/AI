@@ -27,7 +27,15 @@ link_item() {
     return
   fi
 
-  if [[ -e "${target}" || -L "${target}" ]]; then
+  if [[ -L "${target}" ]]; then
+    rm "${target}"
+    ln -s "${source}" "${target}"
+    printf 'Replaced link: %s -> %s\n' "${target}" "${source}"
+    ((linked += 1))
+    return
+  fi
+
+  if [[ -e "${target}" ]]; then
     printf 'Cannot link %s: %s already exists\n' "${name}" "${target}" >&2
     exit 1
   fi
