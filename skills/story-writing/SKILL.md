@@ -90,13 +90,14 @@ Do not turn Conversation into technical design. Avoid prescribing tables, endpoi
 
 ## Story Rules
 
+- Size every child story so one person or agent can take it from a fresh context window through the required design clarification, implementation, review, and relevant validation. If completing it would require handing accumulated working context to a new window, split it further.
 - Default to many small stories rather than a few large ones.
 - Each story must deliver observable user value across the stack.
 - Keep each story independently shippable where possible.
 - Avoid UI-only, API-only, database-only, or refactor-only stories unless the user explicitly asks for technical tasks.
 - Order stories by the thinnest path to useful progress.
 - Prefer a narrow happy path before edge cases, admin controls, reporting, automation, or optimization.
-- If a story is too large, narrow the audience, entry point, supported scenario, output, data set, or failure mode.
+- If a story cannot fit in one fresh context window, narrow the audience, entry point, supported scenario, output, data set, or failure mode, then make the remaining behavior a later story.
 - Include dependencies only when one story cannot deliver its user outcome until another story exists. Do not record implementation order, refactoring order, or convenience as a product dependency.
 
 ## Epic And Dependency Shape
@@ -139,7 +140,7 @@ Before asking for final approval, run an independent subagent to review the draf
 - Negotiable: does the story leave room for product conversation rather than locking in a design or implementation?
 - Valuable: is the user value observable and worth shipping?
 - Estimatable: is the story clear enough that its size and risk could be discussed without rediscovering product requirements?
-- Small: is the story narrow enough for a thin, vertical delivery slice?
+- Small: can one fresh context window complete the thin, vertical delivery slice, including relevant validation, without relying on prior working context?
 - Testable: are the Confirmation criteria specific and observable enough to verify?
 
 Keep the review independent: give the subagent the story set, dependency map, and relevant product principles, but ask it to challenge unclear value, unresolved product questions, oversized stories, unnecessary dependencies, weak Confirmation criteria, vague accepted assumptions, and hidden implementation tasks.
