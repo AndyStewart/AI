@@ -20,6 +20,7 @@ link_item() {
   local source="$1"
   local target="$2"
   local name="$3"
+  local replace_file="${4:-false}"
 
   if [[ -L "${target}" && "$(readlink "${target}")" == "${source}" ]]; then
     printf 'Already linked: %s\n' "${name}"
@@ -31,6 +32,14 @@ link_item() {
     rm "${target}"
     ln -s "${source}" "${target}"
     printf 'Replaced link: %s -> %s\n' "${target}" "${source}"
+    ((linked += 1))
+    return
+  fi
+
+  if [[ "${replace_file}" == "true" && -f "${target}" ]]; then
+    rm "${target}"
+    ln -s "${source}" "${target}"
+    printf 'Replaced file: %s -> %s\n' "${target}" "${source}"
     ((linked += 1))
     return
   fi
@@ -50,7 +59,9 @@ if [[ ! -f "${source_agents_file}" ]]; then
   exit 1
 fi
 
-link_item "${source_agents_file}" "${codex_home}/AGENTS.md" "AGENTS.md"
+# The profile-level AGENTS.md is managed by this repository, so replace a file
+# that was previously created there. Skill directories remain protected.
+link_item "${source_agents_file}" "${codex_home}/AGENTS.md" "AGENTS.md" true
 
 while IFS= read -r skill_file; do
   skill_dir="${skill_file%/SKILL.md}"
