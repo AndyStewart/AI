@@ -1,4 +1,4 @@
 interface:
   display_name: "Implement Issue"
-  short_description: "Implement issues or stories in committed slices"
-  default_prompt: "Use $implement-issue to deliver this issue or story in small, validated, committed vertical slices."
+  short_description: "Implement stories from designs with test-first evidence"
+  default_prompt: "Use $implement-issue to deliver this story from its technical design, proving each acceptance criterion with focused test-first evidence, an acceptance test, a passing build, and independent review."

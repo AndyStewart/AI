@@ -56,7 +56,6 @@ Use the least expensive capable model:
 
 - Luna for bounded research, solution exploration, checklist review, and
   mechanical edits.
-- Terra when deeper synthesis or implementation judgment is needed.
 - Sol or Astra for substantial ambiguity, cross-cutting complexity, or
   high-stakes work.
 
